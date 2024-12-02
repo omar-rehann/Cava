@@ -1,0 +1,224 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* start hedaer */
+
+section.header header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    z-index: 1000;
+}
+
+section.header header nav {
+    height: 34px;
+    margin: 0px 20px;
+}
+
+section.header header nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+section.header header nav ul li {
+    margin: 10px 10px;
+}
+
+section.header header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 1S;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+section.header header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #088178;
+    bottom: -1px;
+    left: 0px;
+    transition: 1s;
+}
+
+section.header header nav ul li a:hover::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #088178;
+    bottom: -1px;
+    left: 0px;
+    transition: 1s;
+}
+
+section.header header nav .shop i {
+    cursor: pointer;
+}
+
+section.header header nav ul li a::before:hover {
+    left: 0px;
+}
+
+section.header header nav .shop a i {
+    cursor: pointer;
+    color: black;
+}
+
+section.header header .toggle {
+    display: none;
+}
+
+@media (max-width:767px) {
+    section.header header nav .shop a i {
+        display: block;
+    }
+    section.header header .toggle {
+        display: block;
+        margin: 0px 10px;
+        cursor: pointer;
+    }
+    section.header header nav {
+        height: 34px;
+        margin: 0px 20px;
+        position: fixed;
+        width: 0%;
+        height: 100%;
+        right: 0;
+        left: -21px;
+        top: 50px;
+        border-top: solid 2px black;
+        background-color: #ccc;
+        transform: translateX(-1000px);
+        transition: 1s;
+    }
+    section.header header nav.active {
+        width: 100%;
+        transform: translateX(0px);
+        transition: 1s;
+    }
+    section.header header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0px -7px;
+        width: 100%;
+    }
+    section.header header nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 10px;
+        margin-right: 30px;
+    }
+    section.header header nav ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        transition: 1S;
+        position: relative;
+        padding-bottom: 4px;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        border: solid 1px black;
+    }
+    section.header header nav ul li a:hover::before {
+        display: none;
+    }
+}
+
+
+/* end hedaer */
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* strat barnch 1 */
+
+
+/* end branch1 */
+
+section.branch-one {
+    margin-top: 30px;
+    position: relative;
+    top: 30px;
+}
+
+section.branch-one .row .image {
+    border: solid 2px black;
+    padding: 10px;
+}
+
+section.branch-one .row .image img {
+    width: 100%;
+    height: 400px;
+}
+
+section.branch-one .row .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+section.branch-one .row .logo img {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    section.branch-one .row .logo img {
+        width: 100%;
+        height: 200px;
+        margin: 10px 0px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+
+/* start footer */
+
+section.footer {
+    margin-top: 10px;
+    border-top: solid 2px blue;
+    border-radius: 10px;
+}
+
+section.footer .row .box img {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 10px 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+section.footer .row .box img:hover {
+    transform: scale(1.2);
+}
+
+section.footer .row .box i {
+    margin: 10px 10px;
+    font-size: 20px;
+}
+
+
+/* end footer */
